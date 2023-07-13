@@ -1,0 +1,297 @@
+/*MorrisRomanBlack*/
+@font-face {
+    font-family: 'MorrisRomanBlack';
+    src: url('./fontes/MorrisRomanBlack.ttf');
+}
+/*Sketch Gothic School*/
+@font-face {
+    font-family: 'SketchGothicSchool';
+    src: url('./fontes/SketchGothicSchool.ttf');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: TimesNewRoman, 'Times New Roman', Times, serif;
+    background-image: url("imagens/Fundo.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s;
+    user-select: none;
+    cursor: pointer;
+}
+
+header {
+    background-image: url('imagens/scroll.jpeg');
+    text-align: center;
+    color: black;
+    width: 100%;
+    padding: 10x 0px 1px 0px;
+    margin-bottom: 70px;
+    user-select: none;
+}
+
+main {
+    flex: 1;
+}
+
+.texto {
+    text-indent: 1em;
+}
+
+div.lateral .texto {
+    margin: 0.5em auto;
+}
+
+div.conteudo .texto {
+    font-size: 1.05em;
+}
+
+div.conteudo div.texto{
+    margin-top: 1em;
+    align-self: normal;
+}
+
+main img {
+    border: 1px solid rgb(255, 230, 109);
+    margin: auto 15px auto auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+header .links {
+    font-family: MorrisRomanBlack;
+    word-spacing: 2em;
+}
+
+header div.titulo {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 1em;
+    margin: auto;
+}
+
+header div.titulo .titulo{
+    font-family: SketchGothicSchool;
+    font-size: 5em;
+    font-weight: lighter;
+    margin: 0em auto;
+}
+
+header div.titulo .imagem.direita {
+    transform: scaleX(-1);
+}
+
+header hr {
+    border: 1px solid black;
+    width: 100%-1px;
+}
+
+a {
+    cursor: pointer;
+}
+
+header a:hover {
+    font-size: 25px;
+    color: rgb(127, 106, 0);
+    text-shadow: 0 0 20px rgb(255, 230, 109), 0 0 30px rgb(255, 230, 109), 0 0 40px rgb(255, 230, 109), 0 0 50px rgb(255, 230, 109), 0 0 60px rgb(255, 230, 109), 0 0 70px rgb(255, 230, 109);
+    transition: 0.2s;
+}
+
+div.lateral {
+    position: absolute;
+    margin: auto 84% auto 10px;
+}
+
+div.lateral table, 
+div.lateral th, 
+div.lateral td {
+    border: 1px solid black;
+}
+
+div.lateral ul {
+    padding-left: 1.1em;
+}
+
+div.lateral li {
+    margin: 5px 0;
+}
+
+div.principal {
+    position: relative;
+    width: 50%;
+    min-height: 80vh;
+    margin: auto 25% auto;
+}
+
+.borda {
+    border: 0.02em solid rgb(255, 230, 109);
+    outline: 0.02em solid rgb(127, 106, 0);
+}
+
+#info,
+div.container {
+    border: 0.02em solid rgb(255, 230, 109);
+    outline: 0.02em solid rgb(127, 106, 0);
+    background-image: url(imagens/scroll.jpeg);
+    padding: 5px 5px 5px 10px;
+    margin-bottom: 50px;
+    color: #000;
+}
+
+div.container img {
+    max-width: 30%;
+}
+
+div.principal div.container div.conteudo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+div.container .data {
+    font-size: 0.35em;
+}
+
+div.container h4,
+div.container h3,
+div.container h1 {
+    margin: 10px auto 5px;
+    font-weight: lighter;
+}
+
+div.container h3 {
+    margin-top: -0.5em;
+    font-size: 1em;
+}
+
+div.container h4 {
+    font-size: 0.9em;
+}
+
+div.container p {
+    margin: auto 5px 2px auto;
+}
+
+div.conteudo p,
+div.conteudo img {
+    margin: 0 5px 0;
+}
+
+div.container hr {
+    border: 2px solid rgb(255, 230, 109);
+    width: inherit;
+}
+
+div.centralizar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.controleMusica {
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+}
+
+div.controleMusica img {
+    width: 64px;
+}
+
+#info {
+    min-height: 1em;
+    max-width: 25em;
+    position: fixed;
+    visibility: hidden;
+    overflow-wrap: break-word;
+    box-shadow: 5px 5px 10px black;
+}
+
+span.Fontes {
+    cursor: pointer;
+    user-select: none;
+    text-decoration: underline;
+}
+
+.button {
+    background-image: url("imagens/scroll.jpeg");
+    border: 0.02em solid rgb(255, 230, 109);
+    outline: 0.02em solid rgb(127, 106, 0);
+    user-select: none;
+    padding: 0.25em;
+    cursor: pointer;
+    margin: 0.5em;
+}
+
+.button:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("imagens/scroll.jpeg");
+    border: 0.02em solid rgb(139, 126, 58);
+}
+
+@media screen and (max-width: 1600px){
+    main {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    div.lateral {
+        display: flex;
+        margin: auto 30% auto 30%;
+        position: relative;
+    }
+
+    div.lateral div.container {
+        margin: auto 10px 20px;
+    }
+
+    div.principal div.container div.conteudo {
+        flex-direction: column;
+    }
+
+    .texto {
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+
+    div.lateral {
+        flex-direction: column;
+        margin: auto 40% auto 40%;
+    }
+
+    header {
+        font-size: small;
+    }
+
+    header a:hover {
+        font-size: 20px;
+    }
+
+    div.principal {
+        margin: auto auto auto;
+    }
+}
+
+@media screen and (max-width: 536px){
+
+    header img{
+        width: 10%;
+    }
+}

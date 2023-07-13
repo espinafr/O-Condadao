@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('imagens/Divinacaobackground.jpg');
+        }
+        img.madame {
+            position: absolute;
+            border: 0px;
+            right: 0;
+            top: 0;
+        }
+        
+        #display {
+            text-align: center;
+            width: 15em;
+        }
+
+        @media screen and (max-width: 1130px) {
+            img.madame {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 546px) {
+            #display {
+                width: fit-content;
+                display: flex;
+            }
+        }
+    </style>
+    <title>O Condadão</title>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+        <div class="titulo">
+            <img src="imagens/floreio.png">
+            <h1 class="titulo">O Condadão</h1>
+            <img class="imagem direita" src="imagens/floreio.png">
+        </div>
+        <hr>
+        <p class="links"><a target="_self" href="index.html">NOTÍCIAS</a> - <a target="_blank" href="https://chat-do-blog.glitch.me">CARTAS</a> - <a href="#DIVINAÇÃO">DIVINAÇÃO</a></p>
+    </header>
+    <!-- Principal -->
+    <main>
+        <div class="principal">
+            <div class="container" style="min-height: 307px;" id="DIVINAÇÃO">
+                <h1 id="oraculo">Madame Suge 'Meg</h1>
+                <h3>Seja bem-vindo à minha jurisdição.. A arte da divinação!</h3>
+                <img class="madame" src="imagens/madame.png">
+                <div class="centralizar" style="height: 10em;">
+                    <div>
+                        <div class="borda" id="display">
+                            <h1 id="destino">???</h1>
+                        </div>
+                    </div>
+                    <a class="button" onclick="destino()">DESTINO</a>
+                    <audio id="risadaAudio">
+                        <source src="sons/Risada.mp3">
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Mutar música e a música -->
+    <div class="controleMusica">
+        <a onclick="musicButton('imagemMusica', 'musicaInicial')"><img data-muted="true" id="imagemMusica" src="imagens/mutespeaker.png"></a>
+        <audio autoplay loop id='musicaInicial' class="audio" muted data-buttonId="imagemMusica">
+            <source src="sons/SeekAndHide.mp3">
+        </audio>
+    </div>
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
+</body>
+</html>
